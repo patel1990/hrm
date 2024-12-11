@@ -11,6 +11,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
+use Illuminate\Support\Facades\Log;
+
 use App\Imports\EmployeesImport;
 use App\Exports\LeaveExport;
 use Maatwebsite\Excel\Facades\Excel;
@@ -235,7 +237,7 @@ class LeaveController extends Controller
         return view('leave.action', compact('employee', 'leavetype', 'leave'));
     }
 
-    public function changeaction(Request $request)
+   public function changeaction(Request $request)
     {
 
         $leave = Leave::find($request->leave_id);
@@ -253,29 +255,23 @@ class LeaveController extends Controller
         $leave->save();
 
          // twilio  
-         $setting = Utility::settings(\Auth::user()->creatorId());
-         $emp = Employee::find($leave->employee_id);
-         if (isset($setting['twilio_leave_approve_notification']) && $setting['twilio_leave_approve_notification'] == 1) {
-           $msg = __("Your leave has been").' '.$leave->status.'.';
-            
-                    
-             Utility::send_twilio_msg($emp->phone,$msg);
-         }
+        
 
         $setings = Utility::settings();
-        if($setings['leave_status'] == 1)
+	 if($setings['leave_status'] == 1)
         {
             $employee     = Employee::where('id', $leave->employee_id)->where('created_by', '=', \Auth::user()->creatorId())->first();
             $leave->name  = !empty($employee->name) ? $employee->name : '';
-            $leave->email = !empty($employee->email) ? $employee->email : '';
+	    $leave->email = !empty($employee->email) ? $employee->email : '';
+
             try
             {
                 Mail::to($leave->email)->send(new LeaveActionSend($leave));
             }
             catch(\Exception $e)
-            {
-                $smtp_error = __('E-Mail has been not sent due to SMTP configuration');
-            }
+	    {       
+		    $smtp_error = __('E-Mail has been not sent due to SMTP configuration');
+	    }
 
             return redirect()->route('leave.index')->with('success', __('Leave status successfully updated.') . (isset($smtp_error) ? $smtp_error : ''));
 
@@ -283,8 +279,7 @@ class LeaveController extends Controller
 
         return redirect()->route('leave.index')->with('success', __('Leave status successfully updated.'));
     }
-
-    public function jsoncount(Request $request)
+public function jsoncount(Request $request)
     {
 //        $leave_counts = LeaveType::select(\DB::raw('COALESCE(SUM(leaves.total_leave_days),0) AS total_leave, leave_types.title, leave_types.days,leave_types.id'))->leftjoin(
 //            'leaves', function ($join) use ($request){

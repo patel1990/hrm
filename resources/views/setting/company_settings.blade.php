@@ -622,12 +622,12 @@
                                 <div class="card-body pd-0">
                                     <div class="row">
                                         <div class="form-group col-md-6">
-                                            <label class="form-control-label mb-0">{{__('Telegram AccessToken')}}</label> <br>
+                                            <label class="form-control-label mb-0">{{__('Telegram AccessToken *')}}</label> <br>
                                             {{ Form::text('telegram_accestoken',isset($settings['telegram_accestoken'])?$settings['telegram_accestoken']:'', ['class' => 'form-control', 'placeholder' => __('Enter Telegram AccessToken')]) }}
                                         </div>
                                 
                                         <div class="form-group col-md-6">
-                                            <label class="form-control-label mb-0">{{__('Telegram ChatID')}}</label> <br>
+                                            <label class="form-control-label mb-0">{{__('Telegram ChatID *')}}</label> <br>
                                             {{ Form::text('telegram_chatid',isset($settings['telegram_chatid'])?$settings['telegram_chatid']:'', ['class' => 'form-control', 'placeholder' => __('Enter Telegram ChatID')]) }}
                                         </div>
                                 
@@ -743,16 +743,16 @@
                                 <div class="card-body pd-0">
                                     <div class="row">
                                         <div class="form-group col-md-4">
-                                            {{Form::label('twilio_sid',__('Twilio SID'),array('class'=>'form-control-label')) }}
+                                            {{Form::label('twilio_sid',__('Twilio SID *'),array('class'=>'form-control-label')) }}
                                             {{ Form::text('twilio_sid',isset($settings['twilio_sid'])?$settings['twilio_sid']:'', ['class' => 'form-control', 'placeholder' => __('Enter Twilio Sid')]) }}
                                         </div>
                                 
                                         <div class="form-group col-md-4">
-                                            <label class="form-control-label mb-0">{{__('Twilio Token')}}</label> <br>
+                                            <label class="form-control-label mb-0">{{__('Twilio Token *')}}</label> <br>
                                             {{ Form::text('twilio_token',isset($settings['twilio_token'])?$settings['twilio_token']:'', ['class' => 'form-control', 'placeholder' => __('Enter Twilio Token')]) }}
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <label class="form-control-label mb-0">{{__('Twilio From')}}</label> <br>
+                                            <label class="form-control-label mb-0">{{__('Twilio From *')}}</label> <br>
                                             {{ Form::text('twilio_from',isset($settings['twilio_from'])?$settings['twilio_from']:'', ['class' => 'form-control', 'placeholder' => __('Enter Twilio From')]) }}
                                         </div>
                                 
