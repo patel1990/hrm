@@ -164,17 +164,15 @@
                                         <td class="" style="vertical-align:top;width:600px;">
                                             <div class="mj-column-per-100 outlook-group-fix" style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                                                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
-                                                    <tr>
-                                                        <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
+
+
+                                                    @if($leave->status == 'Approve')
+                                                      <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
                                                             <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
-                                                                <p style="line-height:32px"><b style="font-weight:700">{{__('Subject : ').'HR department/Company to send approval letter to '.$leave->status.' a vacation or leave.'}}</b></p>
+                                                                <p style="line-height:32px"><b style="font-weight:700">{{__('Subject : ').'Leave Status'}}</b></p>
                                                                 <p style="line-height:32px"><b style="font-weight:700">{{__('Hi ').$leave->name.','}}</b></p>
                                                             </div>
                                                         </td>
-                                                    </tr>
-
-
-                                                    @if($leave->status == 'Pending')
                                                         <tr>
                                                             <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
                                                                 <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
@@ -191,7 +189,38 @@
                                                                 </div>
                                                             </td>
                                                         </tr>
+							@endif
+						      @if($leave->status == 'Pending')
+                                                        <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
+                                                            <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
+                                                                <p style="line-height:32px"><b style="font-weight:700">{{__('Subject : ').'Request for Leave'}}</b></p>
+                                                                <p style="line-height:32px"><b style="font-weight:700">{{__('Hi ')."Sir/Ma'am,"}}</b></p>
+                                                            </div>
+                                                        </td>
+                                                      <tr>
+                                                            <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
+                                                                <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
+                                                                    <p style="margin: 10px 0;">{{__(' request you to complete all your pending work or any other important issue so that the company does not face any loss or problem during your absence. We appreciate your thoughtfulness to inform us well in advance')}}</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
                                                     @endif
+                                                     @if($leave->status == 'Reject')
+                                                        <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
+                                                            <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
+                                                                <p style="line-height:32px"><b style="font-weight:700">{{__('Subject : ').'Leave Status'}}</b></p>
+                                                                <p style="line-height:32px"><b style="font-weight:700">{{__('Hi ').$leave->name.','}}</b></p>
+                                                            </div>
+                                                        </td>
+                                                      <tr>
+                                                            <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
+                                                                <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
+                                                                    <p style="margin: 10px 0;">{{__(' We request you to complete all your pending work or any other important issue so that the company does not face any loss or problem during your absence. We appreciate your thoughtfulness to inform us well in advance')}}</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    @endif
+
 
                                                     <tr>
                                                         <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">

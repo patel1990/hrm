@@ -29,6 +29,6 @@ class LeaveActionSend extends Mailable
      */
     public function build()
     {
-        return $this->view('email.leave_action_send')->with('leave', $this->leave)->subject('Ragarding to approval letter to approve or reject a vacation or leave.');
+        return $this->view('email.leave_action_send')->with('leave', $this->leave)->subject('Leave Application.');
     }
 }
