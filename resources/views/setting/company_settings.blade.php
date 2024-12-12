@@ -622,13 +622,14 @@
                                 <div class="card-body pd-0">
                                     <div class="row">
                                         <div class="form-group col-md-6">
-                                            <label class="form-control-label mb-0">{{__('Telegram AccessToken *')}}</label> <br>
-                                            {{ Form::text('telegram_accestoken',isset($settings['telegram_accestoken'])?$settings['telegram_accestoken']:'', ['class' => 'form-control', 'placeholder' => __('Enter Telegram AccessToken')]) }}
+                                            {!! Form::label('telegram_accestoken', __('Telegram AccessToken'),['class'=>'form-control-label']) !!}<span class="text-danger pl-1">*</span>
+                                            {{ Form::text('telegram_accestoken',isset($settings['telegram_accestoken'])?$settings['telegram_accestoken']:'', ['class' => 'form-control', 'placeholder' => __('Enter Telegram AccessToken'),'required' => 'required']) }}
                                         </div>
                                 
                                         <div class="form-group col-md-6">
-                                            <label class="form-control-label mb-0">{{__('Telegram ChatID *')}}</label> <br>
-                                            {{ Form::text('telegram_chatid',isset($settings['telegram_chatid'])?$settings['telegram_chatid']:'', ['class' => 'form-control', 'placeholder' => __('Enter Telegram ChatID')]) }}
+                                           {!! Form::label('telegram_chatid', __('Telegram ChatID'),['class'=>'form-control-label']) !!}<span class="text-danger pl-1">*</span>
+
+                                            {{ Form::text('telegram_chatid',isset($settings['telegram_chatid'])?$settings['telegram_chatid']:'', ['class' => 'form-control', 'placeholder' => __('Enter Telegram ChatID'),'required' => 'required']) }}
                                         </div>
                                 
                                     </div>

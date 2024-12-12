@@ -111,14 +111,31 @@ class LeaveController extends Controller
             $leave->created_by       = \Auth::user()->creatorId();
             $leave->save();
 
-            
+         $setings = Utility::settings();
+        if($setings['leave_status'] == 1)
+        {
+            $employee     = Employee::where('id', $leave->employee_id)->where('created_by', '=', \Auth::user()->creatorId())->first();
+            $leave->name  = !empty($employee->name) ? $employee->name : '';
+            $leave->email = !empty($employee->email) ? $employee->email : '';
+            try
+            {
+                Mail::to($leave->email)->send(new LeaveActionSend($leave));
+            }
+            catch(\Exception $e)
+            {
+                $smtp_error = __('E-Mail has been not sent due to SMTP configuration');
+            }
+
+            return redirect()->route('leave.index')->with('success', __('Leave status successfully updated.') . (isset($smtp_error) ? $smtp_error : ''));
+
+        }   
               
             return redirect()->route('leave.index')->with('success', __('Leave  successfully created.'));
         }
         else
         {
             return redirect()->back()->with('error', __('Permission denied.'));
-        }
+	}
     }
 
     public function show(Leave $leave)
