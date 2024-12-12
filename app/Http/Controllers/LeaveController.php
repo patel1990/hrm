@@ -118,7 +118,7 @@ class LeaveController extends Controller
             $HR           = User::where('name', '=', 'compufy')->where('type', '=', 'company')->first();		
             $employee     = Employee::where('id', $leave->employee_id)->where('created_by', '=', \Auth::user()->creatorId())->first();
             $leave->name  = !empty($employee->name) ? $employee->name : '';
-	    $leave->email = !empty($HR->email) ? $HR->email : '';
+	         $leave->email = !empty($HR->email) ? $HR->email : '';
 	   
             try
             {
