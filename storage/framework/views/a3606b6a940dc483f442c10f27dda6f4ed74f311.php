@@ -187,92 +187,90 @@
                                                                     <p style="margin: 10px 0;"><?php echo e(__('Enjoy Your Time Off')); ?></p>
                                                                 </div>
                                                             </td>
-							</tr>
-                                                         <tr>
-                                                        <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
-                                                            <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
-                                                                <p style="margin: 10px 0;"><i style="font-style:normal"><?php echo e(__('Thank you')); ?></i></p>
-                                                            </div>
-                                                        </td>
-						    </tr>
+							                            </tr>
                                                       <tr>
-                                                       <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
-                                                            <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
-                                                                <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(__('Regards,')); ?></b></i></p>
-                                                                <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(__('HR Department,')); ?></b></i></p>
-                                                                <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(env('APP_NAME')); ?></b></i></p>
-                                                            </div>
-                                                        </td>
-                                                        </tr>
-						      <?php endif; ?>
+                                                         <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
+                                                             <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
+                                                                 <p style="margin: 10px 0;"><i style="font-style:normal"><?php echo e(__('Thank you')); ?></i></p>
+                                                             </div>
+                                                          </td>
+						                              </tr>
+                                                      <tr>
+                                                         <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
+                                                              <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
+                                                                 <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(__('Regards,')); ?></b></i></p>
+                                                                 <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(__('HR Department,')); ?></b></i></p>
+                                                                 <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(env('APP_NAME')); ?></b></i></p>
+                                                              </div>
+                                                          </td>
+                                                       </tr>
+						                            <?php endif; ?>
 						                         <?php if($leave->status == 'Pending'): ?>
-                                                        <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
-                                                            <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
-                                                                <p style="line-height:32px"><b style="font-weight:700"><?php echo e(__('Subject : ').'Request for Leave'); ?></b></p>
-                                                                <p style="line-height:32px"><b style="font-weight:700"><?php echo e(__('Hi ')."Sir/Ma'am,"); ?></b></p>
-                                                            </div>
-                                                        </td>
-                                                      <tr>
-                                                            <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
+                                                           <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
                                                                 <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
-                                                                 <p style="margin: 10px 0;"><?php echo e(__('my name is ' . $leave->name . '. I have request to approve my leave. My reason is ' . $leave->leave_reason . '.')); ?></p>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                          <tr>
-                                                        <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
-                                                            <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
-                                                                <p style="margin: 10px 0;"><i style="font-style:normal"><?php echo e(__('Thank you')); ?></i></p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                      <tr>
-                                                       <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
-                                                            <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
-                                                                <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(__('Regards,')); ?></b></i></p>
-                                                                <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(__('' . $leave->name)); ?></b></i></p>
-                                                            </div>
-                                                        </td>
-                                                        </tr>
-
-                                                    <?php endif; ?>
-                                                     <?php if($leave->status == 'Reject'): ?>
-                                                        <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
-                                                            <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
-                                                                <p style="line-height:32px"><b style="font-weight:700"><?php echo e(__('Subject : ').'Leave Status'); ?></b></p>
-                                                                <p style="line-height:32px"><b style="font-weight:700"><?php echo e(__('Hi ').$leave->name.','); ?></b></p>
-                                                            </div>
-							</td>
-                                                         <tr>
-                                                            <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
-                                                                <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
-                                                                 <p style="margin: 10px 0;"><?php echo e(__('Unfortunately, we are unable to approve your leave request at this time.We understand this may be disappointing and appreciate your understanding. Please let us know if there are any other ways we can support you.')); ?></p>
+                                                                 <p style="line-height:32px"><b style="font-weight:700"><?php echo e(__('Subject : ').'Request for Leave'); ?></b></p>
+                                                                 <p style="line-height:32px"><b style="font-weight:700"><?php echo e(__('Hi ')."Sir/Ma'am,"); ?></b></p>
                                                                 </div>
                                                             </td>
                                                            <tr>
+                                                              <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
+                                                                  <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
+                                                                     <p style="margin: 10px 0;"><?php echo e(__('my name is ' . $leave->name . '. I have request to approve my leave. My reason is ' . $leave->leave_reason . '.')); ?></p>
+                                                                 </div>
+                                                              </td>
+                                                            </tr>
+                                                          <tr>
+                                                               <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
+                                                                  <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
+                                                                     <p style="margin: 10px 0;"><i style="font-style:normal"><?php echo e(__('Thank you')); ?></i></p>
+                                                                 </div>
+                                                               </td>
+                                                          </tr>
                                                             <tr>
-                                                       <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
-                                                            <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
-                                                                <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(__('Regards,')); ?></b></i></p>
-                                                                <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(__('HR Department,')); ?></b></i></p>
-                                                                <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(env('APP_NAME')); ?></b></i></p>
-                                                            </div>
-                                                        </td>
-                                                        </tr>
-                                                    <?php endif; ?>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </td>
-        </tr>
-    </table>
-</div>
-</body>
+                                                                <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
+                                                                     <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
+                                                                       <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(__('Regards,')); ?></b></i></p>
+                                                                       <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(__('' . $leave->name)); ?></b></i></p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                     <?php endif; ?>
+                                                     <?php if($leave->status == 'Reject'): ?>
+                                                                            <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
+                                                                            <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
+                                                                       <p style="line-height:32px"><b style="font-weight:700"><?php echo e(__('Subject : ').'Leave Status'); ?></b></p>
+                                                                       <p style="line-height:32px"><b style="font-weight:700"><?php echo e(__('Hi ').$leave->name.','); ?></b></p>
+                                                                           </div>
+							                                 </td>
+                                                               <tr>
+                                                             <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
+                                                                 <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
+                                                                      <p style="margin: 10px 0;"><?php echo e(__('Unfortunately, we are unable to approve your leave request at this time.We understand this may be disappointing and appreciate your understanding. Please let us know if there are any other ways we can support you.')); ?></p>
+                                                                 </div>
+                                                             </td>
+                                                                  <tr>
+                                                               <tr>
+                                                                   <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
+                                                                       <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
+                                                                          <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(__('Regards,')); ?></b></i></p>
+                                                                          <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(__('HR Department,')); ?></b></i></p>
+                                                                          <p style="margin: 10px 0;"><i style="font-style:normal"><b style="font-weight:700"><?php echo e(env('APP_NAME')); ?></b></i></p>
+                                                                       </div>
+                                                                    </td>
+                                                             </tr>
+                                                        <?php endif; ?>
+                                                 </table>
+                                             </div>
+                                          </td>
+                                     </tr>
+                                </tbody>
+                          </table>
+                     </div>
+                 </td>
+              </tr>
+          </table>
+       </div>
+   </body>
 </html>
 
 
