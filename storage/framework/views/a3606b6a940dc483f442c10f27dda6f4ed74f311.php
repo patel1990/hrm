@@ -173,15 +173,8 @@
                                                         </td>
                                                     </tr>
 
-                                                    <tr>
-                                                        <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
-                                                            <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
-                                                                <p style="margin: 10px 0;"><?php echo e(__('I have '.$leave->status.' your leave request for '.$leave->leave_reason.' from '.$leave->start_date.' to '.$leave->end_date)); ?></p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
 
-                                                    <?php if($leave->status == 'Approve'): ?>
+                                                    <?php if($leave->status == 'Pending'): ?>
                                                         <tr>
                                                             <td align="left" style="font-size:0px;padding:0px 25px 0px 25px;padding-top:0px;padding-right:50px;padding-bottom:0px;padding-left:50px;word-break:break-word;">
                                                                 <div style="font-family:Open Sans, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#797e82;">
