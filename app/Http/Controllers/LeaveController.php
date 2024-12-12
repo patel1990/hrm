@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employee;
+use App\Models\User;
 use App\Models\Leave;
 use App\Models\LeaveType;
 use App\Mail\LeaveActionSend;
@@ -114,9 +115,11 @@ class LeaveController extends Controller
          $setings = Utility::settings();
         if($setings['leave_status'] == 1)
         {
+            $HR           = User::where('name', '=', 'compufy')->where('type', '=', 'company')->first();		
             $employee     = Employee::where('id', $leave->employee_id)->where('created_by', '=', \Auth::user()->creatorId())->first();
             $leave->name  = !empty($employee->name) ? $employee->name : '';
-            $leave->email = !empty($employee->email) ? $employee->email : '';
+	    $leave->email = !empty($HR->email) ? $HR->email : '';
+	   
             try
             {
                 Mail::to($leave->email)->send(new LeaveActionSend($leave));
@@ -126,11 +129,10 @@ class LeaveController extends Controller
                 $smtp_error = __('E-Mail has been not sent due to SMTP configuration');
             }
 
-            return redirect()->route('leave.index')->with('success', __('Leave status successfully updated.') . (isset($smtp_error) ? $smtp_error : ''));
+            return redirect()->route('leave.index')->with('success', __('Leave  successfully created.') . (isset($smtp_error) ? $smtp_error : ''));
 
         }   
               
-            return redirect()->route('leave.index')->with('success', __('Leave  successfully created.'));
         }
         else
         {
