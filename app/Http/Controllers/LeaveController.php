@@ -119,7 +119,7 @@ class LeaveController extends Controller
             $leave->email = !empty($employee->email) ? $employee->email : '';
             try
             {
-                Mail::to($leave->email)->send(new LeaveActionSend($leave));
+                Mail::to($leave->email)->send(new LeaveCreateSend($leave));
             }
             catch(\Exception $e)
             {
