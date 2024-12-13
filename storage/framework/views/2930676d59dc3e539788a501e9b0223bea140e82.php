@@ -108,7 +108,7 @@ unset($__errorArgs, $__bag); ?>
             </div>
 
             <h5 class="copyright-text">
-                <?php echo e((Utility::getValByName('footer_text')) ? Utility::getValByName('footer_text') :  __('Copyright HRMGo')); ?> <?php echo e(date('Y')); ?>
+                <?php echo e((Utility::getValByName('footer_text')) ? Utility::getValByName('footer_text') :  __('Copyright Compufy Technolab')); ?> <?php echo e(date('Y')); ?>
 
             </h5>
             <div class="all-select">

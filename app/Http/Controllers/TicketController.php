@@ -80,7 +80,7 @@ class TicketController extends Controller
 
             //slack
             $setting = Utility::settings(\Auth::user()->creatorId());
-            $emp = User::where('id', $request->employee_id)->first();
+	    $emp = User::where('id', $request->employee_id)->first();
             if (isset($setting['ticket_notification']) && $setting['ticket_notification'] == 1) {
                 $msg = ("New Support ticket created of") . ' ' . $request->priority . ' ' . __("priority for") . ' ' . $emp->name . ' ';
                 Utility::send_slack_msg($msg);
