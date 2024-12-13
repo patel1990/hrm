@@ -527,7 +527,7 @@ class Utility extends Model
     public static function send_slack_msg($msg)
     {
          
-        $settings  = Utility::settings(Auth::user()->creatorId());
+        $settings  = Utility::settings(\Auth::user()->creatorId());
 
         if (isset($settings['slack_webhook']) && !empty($settings['slack_webhook'])) {
             $ch = curl_init();

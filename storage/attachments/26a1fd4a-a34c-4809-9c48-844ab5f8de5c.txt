@@ -1,0 +1,10 @@
+date,location,temperature,humidity,precipitation,wind_speed
+2024-09-01,New York,25,60,0.0,12
+2024-09-02,New York,23,55,0.1,8
+2024-09-03,New York,20,70,5.2,15
+2024-09-01,Los Angeles,30,40,0.0,10
+2024-09-02,Los Angeles,32,35,0.0,8
+2024-09-03,Los Angeles,33,30,0.0,12
+2024-09-01,Chicago,18,80,2.5,20
+2024-09-02,Chicago,16,85,3.0,18
+2024-09-03,Chicago,17,82,1.0,14
