@@ -1,4 +1,4 @@
-
+@Library("shared-library") _
 
 
 pipeline {
@@ -6,9 +6,7 @@ pipeline {
  stages {
        stage('Set Environment Variables') {
          steps {
-	 sh"""
-	 ls -al
-	 """
+	 stageDemo()
 	   
 	 }
        }
