@@ -16,7 +16,7 @@ pipeline {
  stages {
        stage('Set Environment Variables') {
          steps {
-	 stageDemo(${env.WORKSPACE})
+	 stageDemo("${env.WORKSPACE}")
 	   
 	 }
        }
