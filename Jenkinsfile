@@ -16,7 +16,7 @@ pipeline {
  stages {
        stage('Set Environment Variables') {
          steps {
-	 stageDemo(GIT_PROJECT:"${env.GIT_PROJECT}",WORKSPACE:"${env.WORKSPACE}",Environment:"${params.Environment}")
+	 stageDemo(GIT_PROJECT:"${env.GIT_PROJECT}",WORKSPACE:"${env.WORKSPACE}",Environment:"${params.LOCATION}")
 	   
 	 }
        }
